@@ -1,77 +1,157 @@
 
+/* ======= ======= ======= default ======= ======= ======= */
+/* ======= ======= ======= default ======= ======= ======= */
+/* ======= ======= ======= default ======= ======= ======= */
+
 /* ======= ======= ======= general ======= ======= ======= */
-html, body {
-    height: 100%;
-    box-sizing: content-box;
+body, html {
+  height: 100%;
+  min-height: 100%;
 }
 body {
-    font-family: "Ariel", sans-serif;
-    border: 2px solid cadetblue;
+  font-family: "Ariel", sans-serif;
+  font-size: 100%;
+}
+* {
+  box-sizing: border-box;
 }
 
-/* ======= ======= =======  sections  ======= ======= ======= */
+/* ======= ======= ======= layout ======= ======= ======= */
+#wrapper {
+  height: 100%;
+  margin: 0 auto;            /* centers page contents */
+  overflow: auto;            /* prevents added space from child (header) margin outside parent (wrapper) */
+}
 .section {
-    margin: 20px;
-    padding: 10px;
-    border: 2px solid purple;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid purple;
 }
-
-/* ======= header ======= */
 #header {
-    background-color: #eee;
+  background-color: #eee;
 }
-
-/* ======= container ======= */
-#container {
-    height: 80px;
-    background-color: Moccasin;
-    border: 2px solid darkorange;
-}
-#container > p {
-    float: left;
-    margin: 0;
-    width: auto;
-}
-
-/* ======= footer ======= */
 #footer {
-    background-color: #eee;
+  background-color: #eee;
+}
+#container {
+  background-color: Moccasin;
+  border: 2px solid darkorange;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
 }
 
-/* ======= ======= =======  testing  ======= ======= ======= */
-
-
-
-
-
-
-
-/* ======= ======= ======= ARCHIVE ======= ======= ======= */
-/* ======= ======= ======= ARCHIVE ======= ======= ======= */
-/* ======= ======= ======= ARCHIVE ======= ======= ======= */
-
-/*box-sizing: border-box;*/
-
-/*#fixed {
-    position: relative;
-    float: left;
-    left: 60px;
-    top: 10px;
-    width: 60px;
-    height: 60px;
-    background-color: purple;
+/* ======= ======= ======= Desktop Down defaults ======= ======= ======= */
+#wrapper {
+  width: 720px;
+  background-color: #eee;
 }
-#test {
-    position: relative;
-    float: left;
-    width: 60px;
-    height: 20px;
-    left: 100px;
-    top: 10px;
-    margin: 20px;
-    padding: 20px;
-    font-size: 20px;
-    line-height: 20px;
-    border: solid 20px red;
+.column {
+  float: left;
+  width: 29.333%;
+  margin: 10px 2%;
+  padding: 20px;
+  background-color: salmon;
+}
+h1 {
+  margin: 10px;
+  text-align: center;
+  font-size: 2.5em;
+}
+h3 {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 1.25em;
+}
+p {
+  font-size: 0.75em;
+}
+
+/* ======= ======= ======= Mobile First defaults ======= ======= ======= */
+/* #wrapper {
+  width: 80%;
+  background-color: #eee;
+} */
+
+/* ======= ======= ======= media queries ======= ======= ======= */
+/* ======= ======= ======= media queries ======= ======= ======= */
+/* ======= ======= ======= media queries ======= ======= ======= */
+
+/* MAX-width triggers when a screen is SMALLER than the specified size */
+/* MIN-width triggers when a screen is LARGER than the specified size */
+
+/* ======= Desktop Down ======= */
+/* screens < 960px */
+@media only screen and (max-width: 960px) {
+  body {
+    font-size: 120%;
+  }
+  #wrapper {
+    width: 80%;
     background-color: thistle;
-}*/
+  }
+  #container {
+    font-size: 130%;
+  }
+  #container > .column:nth-of-type(3) {
+    width: 96%;
+    margin-right: 4%;
+  }
+  .column {
+    float: left;
+    width: 46%;
+  }
+  h1 {
+    font-size: 2em;
+  }
+}
+/* screens < 860px */
+@media only screen and (max-width: 860px) {
+  body {
+    font-size: 140%;
+  }
+  #wrapper {
+    width: 60%;
+    background-color: lavender;
+  }
+  #container {
+    padding: 10px 20px;
+    font-size: 130%;
+  }
+  #container > .column:nth-of-type(3) {
+    width: 100%;
+    margin-right: 0;
+  }
+  .column {
+    float: none;
+    width: 100%;
+    margin: 10px auto;
+    background-color: indianred;
+  }
+  h1 {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #wrapper {
+    min-width: 420px;
+  }
+}
+/* ======= Mobile First ======= */
+/* screens >= 960px */
+/* @media only screen and (min-width: 960px) {
+  #wrapper { width: 720px; }
+} */
+
+
+
+
+  /* ======= ======= ======= ARCHIVE ======= ======= ======= */
+  /* ======= ======= ======= ARCHIVE ======= ======= ======= */
+  /* ======= ======= ======= ARCHIVE ======= ======= ======= */
